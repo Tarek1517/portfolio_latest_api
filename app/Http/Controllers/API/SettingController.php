@@ -24,7 +24,7 @@ class SettingController extends Controller
         $projectIds = json_decode(getSetting('home_projects'));
         $projects = [];
         if ($projectIds !== null && count($projectIds) > 0) {
-            $projects = Project::whereIn('id', $projectIds ?? [])->with('category', 'languages', 'images')->get();
+            $projects = Project::whereIn('id', $projectIds ?? [])->with(['category', 'languages', 'images'])->get();
         }
 
         $experienceIds = json_decode(getSetting('home_experience'));

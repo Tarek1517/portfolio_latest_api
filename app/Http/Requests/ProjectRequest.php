@@ -50,6 +50,11 @@ class ProjectRequest extends FormRequest
             'challenges.*.title'        => 'nullable|string|max:255',
             'challenges.*.solution'     => 'nullable|string',
 
+            // Repeater – statistics
+            'statistics'                => 'nullable|array',
+            'statistics.*.title'        => 'nullable|string|max:255',
+            'statistics.*.desc'         => 'nullable|string',
+
             // Gallery images (multiple upload)
             'gallery_images'            => 'nullable|array',
             'gallery_images.*'          => 'file|mimes:png,jpg,jpeg,webp,avif|max:4096',

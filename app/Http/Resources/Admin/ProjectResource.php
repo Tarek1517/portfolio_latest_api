@@ -27,6 +27,7 @@ class ProjectResource extends JsonResource
             'status'            => $this->status,
             'key_features'      => $this->key_features ?? [],
             'challenges'        => $this->challenges ?? [],
+            'statistics'        => $this->statistics ?? [],
 
             // Relationships
             'category_id'       => $this->category_id,

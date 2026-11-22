@@ -25,6 +25,9 @@ class ExperienceController extends Controller
     public function store(ExperienceRequest $request)
     {
         $data = $request->validated();
+        if ($request->hasFile('company_logo')) {
+            $data['company_logo'] = $request->file('company_logo')->store('uploads/experiences', 'public');
+        }
         $experience = Experience::create($data);
         return ExperienceResource::make($experience);
     }

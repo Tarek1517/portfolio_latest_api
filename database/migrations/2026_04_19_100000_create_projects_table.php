@@ -24,6 +24,7 @@ return new class extends Migration {
             // JSON columns for structured repeater fields
             $table->json('key_features')->nullable();  // [{ icon, title, description }]
             $table->json('challenges')->nullable();    // [{ title, solution }]
+            $table->json('statistics')->nullable();    // [{ title, desc }]
             $table->timestamps();
         });
     }

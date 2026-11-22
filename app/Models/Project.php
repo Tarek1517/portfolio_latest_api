@@ -26,6 +26,7 @@ class Project extends Model
         'status',
         'key_features',
         'challenges',
+        'statistics',
     ];
 
     protected $casts = [
@@ -33,6 +34,7 @@ class Project extends Model
         'status'       => 'boolean',
         'key_features' => 'array',
         'challenges'   => 'array',
+        'statistics'   => 'array',
     ];
 
     protected $appends = ['image_url'];
